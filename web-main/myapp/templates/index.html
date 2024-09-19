@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>อาหารพื้นเมืองที่มีสรรพคุณต่อสุขภาพตามวิถีภูมิปัญญาท้องถิ่นของจังหวัดอุบลราชธานี</title>
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@200;300;300;500;600;700&family=Mitr:wght@200;300;400;500;600;700&family=Prompt:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Sarabun', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        header nav ul {
+            list-style-type: none;
+            padding: 1;
+            margin: 2;
+            background-color: #ef9b0a;
+            text-align: left;
+        }
+
+        header nav ul li {
+            display: inline;
+            margin: 0;
+        }
+
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 20px 20px;
+            display: inline-block;
+            background-color: #ef9b0a;
+        }
+
+        header nav ul li a:hover {
+            background-color: #ef9b0a;
+        }
+
+        h1 {
+            text-decoration: underline;
+            font-family: 'Prompt', sans-serif;
+            text-align: center;
+            margin-top: 20px;
+            font-size: 1rem;
+            color: #333;
+        }
+
+        #foods {
+            display: flex;
+            justify-content: space-between; /* กระจายการ์ดให้มีช่องว่างระหว่างกัน */
+            flex-wrap:None; /* ทำให้การ์ดขึ้นบรรทัดใหม่เมื่อพื้นที่ไม่พอ */
+            padding: 20px;
+        }
+
+        .food-item {
+            background-color: white;
+            border: none;
+            border-radius: 8px;
+            width: 300px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.2s;
+            margin: 20px;
+        }
+
+        .food-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .food-item img {
+            max-width: 100%;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+
+        .food-item h2 {
+            font-family: 'Mitr', sans-serif;
+            font-size: 1.2rem;
+            color: #515151;
+            margin-bottom: 10px;
+        }
+
+        .food-item p {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+
+        .food-item button {
+            background-color: #3c3c3c;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: background-color 0.3s;
+        }
+
+        .food-item button:hover {
+            background-color: #ef9b0a;
+        }
+
+        .food-item button a {
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{% url 'index' %}">หน้าแรก</a></li>
+                <li><a href="{% url 'calorie' %}">ตารางแคลอรี</a></li>
+                <li><a href="{% url 'about' %}">ผู้จัดทำ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>อาหารพื้นเมืองที่มีสรรพคุณต่อสุขภาพตามวิถีภูมิปัญญาท้องถิ่นของจังหวัดอุบลราชธานี</h1>
+        <section id="foods">
+            <div class="food-item">
+                <img src="/static/images/card-01.jpg" >
+                <h2>เมี่ยงคำกลีบบัวหลวงแบบโบราณ</h2>
+                <p>มีคุณค่าทางสมุนไพรสูง เพราะมีคุณสมบัติในการบำรุงรักษาธาตุทั้ง 4 เพื่อให้สมดุลกัน กลีบบัวหลวง มีสีสันสวยงาม มีเส้นใยอาหารสูง และช่วยบำรุงหัวใจ ลดความดันโลหิตสูง และลดระดับน้ำตาลในเลือดได้</p>
+                <button><a href="{% url 'detail1' %}">เรียนรู้เพิ่มเติม</a></button>
+            </div>
+
+            <div class="food-item">
+                <img src="/static/images/card-02.jpg" alt="ปลาส้มทรงเครื่องสมุนไพร">
+                <h2>ปลาส้มทรงเครื่องสมุนไพร</h2>
+                <p>ปลาที่นำมาเป็นปลาส้ม จะเลือกใช้ปลาบึกและปลาสวาย ซึ่ง เป็นปลาธรรมชาติจากลุ่มแม่น้ำโขง เนื้อปลามีคุณค่าทางโภชนาการ
+                    อุดมไปด้วยโปรตีนสูง ไขมันต่ำ ประกอบกับจังหวัดอุบลราชธานีมีแม่น้ำไหลผ่านถึง 3 สาย ได้แก่ แม่น้ำมูล แม่น้ำชี และแม่น้ำโขง
+                    จึงอุดมไปด้วยพันธุ์ปลานานาชนิด จึงได้รับสมญานามยกให้เป็นราชธานีแห่งปลาแซ่บหลาย </p>
+                <button><a href="{% url 'detail2' %}">เรียนรู้เพิ่มเติม</a></button>
+            </div>
+
+            <div class="food-item">
+                <img src="/static/images/card-03.jpg" alt="หมี่กะทิ">
+                <h2>หมี่กะทิ</h2>
+                <p>มีคุณค่าทางสมุนไพรสูงมีใยอาหารสูง มีวิตามิน และเกลือแร่ที่สำคัญ อยู่ในส่วนประกอบของอาหารและในส่วนที่เป็นเครื่องเคียง
+                     อาหารพื้นเมือง อุดมด้วยพืชผักสมุนไพรมากมายหลายชนิด ซึ่งมีสรรพคุณทางยาจากสารพฤกษเคมี
+                      จึงมีคุณสมบัติในการรักษาสุขภาพให้เป็นปกติกับปรับปรุงสุขภาพให้ดีขึ้นและลดอัตราเสี่ยงต่อการเกิดโรค</p>
+                <button><a href="{% url 'detail3' %}">เรียนรู้เพิ่มเติม</a></button>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ตารางแคลอรี</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    body {
+        font-family: 'Prompt', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f9f9f9;
+    }
+
+    header nav ul {
+        list-style-type: none;
+        padding: 1;
+        margin: 2;
+        background-color: #ef9b0a;
+        text-align: lift;
+    }
+
+    header nav ul li {
+        display: inline;
+        margin: 0;
+    }
+
+    header nav ul li a {
+        color: white;
+        text-decoration: none;
+        padding: 20px 20px;
+        display: inline-block;
+        background-color: #ef9b0a;
+    }
+
+    header nav ul li a:hover {
+        background-color: #ef9b0a;
+    }
+</style>
+</head>
+    <header>
+            <nav>
+                <ul>
+                    <li><a href="{% url 'index' %}">หน้าแรก</a></li>
+                    <li><a href="{% url 'calorie' %}">ตารางแคลอรี</a></li>
+                    <li><a href="{% url 'about' %}">ผู้จัดทำ</a></li>
+                </ul>
+            </nav>
+        </header>
+    <main>
+        <h1>ตารางเทียบแคลอรีของอาหารพื้นเมือง</h1>
+        <p>ข้อมูลจะเพิ่มเข้ามาภายหลัง...</p>
+    </main>
+    <footer>
+        
+    </footer>
+</body>
+</html>
